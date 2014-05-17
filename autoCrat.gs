@@ -24,10 +24,10 @@ function onInstall() {
 
 function onOpen() {
   var ss = SpreadsheetApp.getActive();
-  var menuEntries = [];
-  menuEntries.push({name: "What is autoCrat?", functionName: "autoCrat_whatIs"});
-  menuEntries.push({name: "Run initial configuration", functionName: "autoCrat_preconfig"});
-  ss.addMenu("autoCrat", menuEntries);
+  ss.addMenu("autoCrat", [
+    {name: "What is autoCrat?", functionName: "autoCrat_whatIs"},
+    {name: "Run initial configuration", functionName: "autoCrat_preconfig"}
+  ]);
   autoCrat_initialize();
 }
 
